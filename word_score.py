@@ -31,8 +31,28 @@ Tests:
 import doctest
 def run_tests():
     doctest.testmod(verbose=True)
+## if using char remember to put in not == so it will check against each letter
+    ##otherwise it tries to find a match in all the words
 
+    ## when practising we put char instead of the 0 , 1, or 2 this meant it over
+    ## rode the answer each time so use the number instead
 
 # Edit this code
 def scorer(word):
 
+    count = 0
+
+    for char in word:
+        
+        if char in "aeiou":
+            count = count + 0
+
+        elif char in "qxyz":
+           count = count + 2
+
+        else:
+           count = count + 1
+
+
+
+    print(count)
